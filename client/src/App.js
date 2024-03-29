@@ -1,12 +1,17 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/Login';
+// import other components as needed
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        Welcome to Bill Splitting app
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        {/* Define other routes here */}
+        <Route path="/" element={<Navigate to="/login" />} /> {/* Redirect root to login */}
+      </Routes>
+    </Router>
   );
 }
 
