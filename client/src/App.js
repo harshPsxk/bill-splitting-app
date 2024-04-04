@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
-// import other components as needed
+import Register from './components/Register';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        {/* Define other routes here */}
-        <Route path="/" element={<Navigate to="/login" />} /> {/* Redirect root to login */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </Router>
   );
